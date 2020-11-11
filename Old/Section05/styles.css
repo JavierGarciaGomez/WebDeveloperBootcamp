@@ -44,7 +44,9 @@ body {
 	border: 2px dashed purple;
 }
 
-/*48 selectors*/
+/*48 and 50 selectors*/
+/*element selectors are used above*/
+
 #idTest{
 	background: yellow;
 }
@@ -54,3 +56,30 @@ body {
 	text-decoration: line-through;
 }
 
+* {
+	/*border: 1px solid lightgrey;*/
+}
+
+ul li a {
+	border: 5px solid orange;
+}
+
+/*or h5 + p*/
+h5 + #idAdj {
+	background-color: green;
+}
+
+a[href="http://www.facebook.com"]{
+	background-color: purple;	
+}
+
+li:nth-of-type(6){
+	background-color: green;
+}
+
+/*for even*/
+
+
+li:nth-of-type(even){
+	background-color: blue;
+}

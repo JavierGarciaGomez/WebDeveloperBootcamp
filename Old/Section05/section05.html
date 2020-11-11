@@ -43,10 +43,13 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</div>
 
-	<h2> Lesson 48: selectors basic todo list</h2>
+	<h2> Lesson 48 && 50: selectors basic todo list</h2>
 	<!-- Selectors:
-			id can just be used one time
-			class can be used for multiple elements -->
+		element selects all elements
+		id can just be used one time
+		class can be used for multiple elements 
+
+	-->
 
 	<ul>
 		<li id="idTest"> <input type="checkbox"> Walk Rusty </li>
@@ -54,6 +57,31 @@
 		<li class="classTest"> <input type="checkbox"> Finishing CSS </li>
 	</ul>
 
+	<h2> Lesson 48 and 50: basic and advanced selectors</h2>
+	<!-- Selectors:
+		elementName element selects all elements
+		# id can just be used one time
+		. class can be used for multiple elements 
+		* selects all
+		descendants (ex. ul li a)
+		adjacent selector: elements that come after (ex. h5+p)
+		attribute selector (ex. a[href="http://www.facebook.com"])
+		nth type ex. ul:nth-of-type(3)
+
+	-->
+
+	<ul>
+		<li id="idTest"> <input type="checkbox"> Walk Rusty </li>
+		<li class="classTest"> <input type="checkbox"> Buy groceries </li>
+		<li class="classTest"> <input type="checkbox"> Finishing CSS </li>
+		<li> <a href="http://www.google.com">Google</a> </li>
+		<li> <a href="http://www.facebook.com">Facebook</a> </li>
+		<li class="classTest"> <input type="checkbox"> N of type </li>
+
+	</ul>
+	<h5> Adjacent selector </h5>
+	<p id=idAdj> first</p>
+	<p> second </p>
 
 
 </body>
