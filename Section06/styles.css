@@ -46,6 +46,19 @@ Selectors:
 .post a - descendant selector
 h1 + p - adjacent selector
 div > li - direct child
+input[type="text"] - attribute selector
+PSEUDO CLASSES
+	:active
+	:checked
+	:first
+	:...
+PSEUDO ELEMENTS
+	::after
+	::before
+	::first-letter
+	::first-line
+	::selection
+	
 
 */
 
@@ -68,7 +81,14 @@ ol>li{
 	background-color: yellow;
 }
 
+/*77*/
 
+li::first-letter{
+	background-color: purple;
+}
 
+li::selection{
+	background-color: orange;
+}
 
 
