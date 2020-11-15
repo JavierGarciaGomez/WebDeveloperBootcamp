@@ -1,6 +1,11 @@
 /* 84 
 84-width and height
 85-Boder
+86-Padding
+87-margin
+88-Display property
+    For example made an h1 inline
+
 
 */
 
@@ -64,7 +69,7 @@ button {
 
 div{
     width: 210px;
-    border: 1px solid red;
+    border: 1px solid grey;
     border-radius: 5px;
     text-align: center;
 }
