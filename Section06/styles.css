@@ -58,6 +58,11 @@ PSEUDO ELEMENTS
 	::first-letter
 	::first-line
 	::selection
+CASCADE
+	Last overrides before
+SPECIFITY
+	id>class>element
+	specifity calculator
 	
 
 */
