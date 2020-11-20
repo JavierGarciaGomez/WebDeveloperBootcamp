@@ -124,5 +124,70 @@ function makeBetweenFunc(min, max) {
     }
 }
 
+// 216
 
+const myMath = {
+    PI: 3.14159,
+    square(num) {
+        return num * num;
+    },
+    cube(num) {
+        return num ** 3;
+    }
+}
+
+const cat = {
+    name: 'Blue Steele',
+    color: 'grey',
+    breed: 'scottish fold',
+    meow() {
+        console.log("THIS IS:", this)
+        console.log(`${this.name} says MEOWWWW`);
+    }
+}
+
+const meow2 = cat.meow;
+
+// Ex 45
+
+const square = {
+    area: function (x) {
+        return x * x;
+    },
+    perimeter: function (x) {
+        return 4 * x;
+    }
+}
+
+// Ex 46
+
+const hen = {
+    name: "Helen",
+    eggCount: 0,
+    layAnEgg() {
+        this.eggCount++;
+        return "EGG";
+    }
+};
+
+
+// 218
+
+
+// try {
+//     hello.toUpperCase();
+// } catch {
+//     console.log("ERROR!!!!")
+// }
+// hello.toUpperCase();
+
+// console.log("AFTER!")
+
+function yell(msg) {
+    try {
+        console.log(msg.toUpperCase().repeat(3));
+    } catch (e) {
+        console.log("Please pass a string next time!")
+    }
+}
 
