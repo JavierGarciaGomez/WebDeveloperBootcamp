@@ -71,7 +71,8 @@ ex54.setAttribute('alt', 'chicken')
 // L248 Changis styles
 //////////////////////////////////////////////
 
-
+const h1 = document.querySelector('h1');
+h1.style.color = 'green';
 
 
 for (let link of allLinks) {
@@ -79,3 +80,19 @@ for (let link of allLinks) {
     link.style.textDecorationColor = 'magenta';
     link.style.textDecorationStyle = 'wavy'
 }
+
+
+// Exercise 55
+const d = document.getElementById("container")
+
+d.style.textAlign = "center";
+
+d.querySelector("img").style.width = "150px";
+
+d.querySelector("img").style.borderRadius = "50%";
+
+///////////////////////////////////////////////
+// L249 ClassList
+//////////////////////////////////////////////
+console.log("XXXXXXXXXXXXXXXXXXXXXXXXXX 247 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")// 
+h1.classList.add('purple');
