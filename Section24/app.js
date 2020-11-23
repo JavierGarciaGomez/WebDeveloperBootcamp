@@ -94,5 +94,7 @@ d.querySelector("img").style.borderRadius = "50%";
 ///////////////////////////////////////////////
 // L249 ClassList
 //////////////////////////////////////////////
-console.log("XXXXXXXXXXXXXXXXXXXXXXXXXX 247 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")// 
+console.log("XXXXXXXXXXXXXXXXXXXXXXXXXX 249 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")// 
 h1.classList.add('purple');
+h1.classList.add('border');
+h1.classList.remove('border');
