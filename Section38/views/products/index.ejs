@@ -1,3 +1,4 @@
+<!-- 396 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +9,31 @@
 </head>
 
 <body>
-    <h1><%= category%> Products!</h1>
+    <!-- //396 -->
+    <% /* %>
+    <h1>All products go here</h1>
+    <ul>
+        <% for(let product of products) { %>
+        <li><%= product.name %> </li>
+        <% }%>
+    </ul>
+    <% */ %>
+
+    <!-- 397 -->
+    <h1>All products go here</h1>
     <ul>
         <% for(let product of products) { %>
         <li><a href="/products/<%=product._id%>"><%= product.name %></a> </li>
         <% }%>
     </ul>
     <a href="/products/new">New Product</a>
+
+
+    <% /* %>
     <%if(category !== 'All') {%>
     <a href="/products">All Products</a>
     <% } %>
-
+    <% */ %>
 </body>
 
 </html>

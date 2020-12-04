@@ -1,3 +1,4 @@
+<!-- 398 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +17,14 @@
         <input type="number" id="price" name="price" placeholder="price">
         <label for="category">Select Category</label>
         <select name="category" id="category">
+            <option value="fruit">fruit</option>
+
             <% for(let category of categories){ %>
             <option value="<%=category%>"><%=category%></option>
             <% } %>
+
         </select>
+
         <button>Submit</button>
     </form>
 

@@ -1,5 +1,8 @@
+// 395
+// requiring mongoose
 const mongoose = require('mongoose');
 
+// creating the schema
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -17,6 +20,9 @@ const productSchema = new mongoose.Schema({
     }
 })
 
+
+// creating the model
 const Product = mongoose.model('Product', productSchema);
 
+// export
 module.exports = Product;
