@@ -3,6 +3,15 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
+// 419
+const verifyPassword = (req, res, next) => {
+    const { password } = req.query;
+    if (password === 'chickennugget') {
+        next();
+    }
+    res.send("YOU NEED A PASSWORD!")
+}
+
 // 415
 app.use(morgan('tiny'));
 
@@ -34,6 +43,12 @@ app.get('/', (req, res) => {
 app.get('/dogs', (req, res) => {
     console.log(`REQUEST DATE: ${req.requestTime}`)
     res.send('WOOF WOOF!')
+})
+
+
+// 419
+app.get('/secret', verifyPassword, (req, res) => {
+    res.send('MY SECRET IS: Sometimes I wear headphones in public so I dont have to talk to anyone')
 })
 
 // 418
