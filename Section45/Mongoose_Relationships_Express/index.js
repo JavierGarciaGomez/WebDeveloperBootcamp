@@ -27,6 +27,7 @@ app.use(methodOverride('_method'))
 
 // FARM ROUTES
 
+// 456
 app.get('/farms', async (req, res) => {
     const farms = await Farm.find({});
     res.render('farms/index', { farms })
@@ -47,13 +48,14 @@ app.delete('/farms/:id', async (req, res) => {
 
 
 
-
+// 456
 app.post('/farms', async (req, res) => {
     const farm = new Farm(req.body);
     await farm.save();
     res.redirect('/farms')
 })
 
+// 458
 app.get('/farms/:id/products/new', async (req, res) => {
     const { id } = req.params;
     const farm = await Farm.findById(id);

@@ -1,0 +1,2 @@
+nodemon app.js
+npm i express mongoose ejs method-override ejs-mate joi
