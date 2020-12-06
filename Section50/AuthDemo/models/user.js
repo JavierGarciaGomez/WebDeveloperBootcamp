@@ -1,6 +1,8 @@
+// 496
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 
+// 496
 const userSchema = new mongoose.Schema({
     username: {
         type: String,

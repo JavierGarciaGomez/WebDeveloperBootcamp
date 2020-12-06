@@ -1,13 +1,14 @@
-// 496
+// 496, 497, 498
 const express = require('express');
 const app = express();
 const User = require('./models/user');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+// 499
 const session = require('express-session');
 
 
-
+// 497
 mongoose.connect('mongodb://localhost:27017/loginDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
@@ -17,11 +18,13 @@ mongoose.connect('mongodb://localhost:27017/loginDemo', { useNewUrlParser: true,
         console.log(err)
     })
 
-
+// 496
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+// 497
 app.use(express.urlencoded({ extended: true }));
+// 499
 app.use(session({ secret: 'notagoodsecret' }))
 
 const requireLogin = (req, res, next) => {
@@ -36,10 +39,12 @@ app.get('/', (req, res) => {
     res.send('THIS IS THE HOME PAGE')
 })
 
+// 496
 app.get('/register', (req, res) => {
     res.render('register')
 })
 
+// 497
 app.post('/register', async (req, res) => {
     const { password, username } = req.body;
     const user = new User({ username, password })
@@ -48,9 +53,11 @@ app.post('/register', async (req, res) => {
     res.redirect('/')
 })
 
+// 498
 app.get('/login', (req, res) => {
     res.render('login')
 })
+// 498
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     const foundUser = await User.findAndValidate(username, password);
@@ -63,6 +70,7 @@ app.post('/login', async (req, res) => {
     }
 })
 
+// 500
 app.post('/logout', (req, res) => {
     req.session.user_id = null;
     // req.session.destroy();
